@@ -7,12 +7,14 @@ import { AppComponent } from './app.component';
 import { UploadComponent } from './upload/upload.component';
 import { RecipeComponent } from './recipe/recipe.component';
 import { ConvertService } from './convert.service';
+import { JsonPrettyPipe } from './json-pretty.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
     UploadComponent,
-    RecipeComponent
+    RecipeComponent,
+    JsonPrettyPipe
   ],
   imports: [
     BrowserModule,

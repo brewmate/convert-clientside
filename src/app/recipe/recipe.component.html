@@ -1,4 +1,4 @@
 <h1>Recipe</h1>
 <div *ngIf="recipe">
-  {{recipe | json}}
+  <textarea cols="40" rows="20" [value]="recipe | jsonPretty"></textarea>
 </div>
