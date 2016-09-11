@@ -1,0 +1,62 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Converter - Brew Day</title>
+  <meta name="description" content="Convert Beer XML files into json, yaml and html tables" />
+
+  <base href="/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <link rel="apple-touch-icon" sizes="57x57" href="/assets/img/apple-icon-57x57.png" />
+  <link rel="apple-touch-icon" sizes="60x60" href="/assets/img/apple-icon-60x60.png" />
+  <link rel="apple-touch-icon" sizes="72x72" href="/assets/img/apple-icon-72x72.png" />
+  <link rel="apple-touch-icon" sizes="76x76" href="/assets/img/apple-icon-76x76.png" />
+  <link rel="apple-touch-icon" sizes="114x114" href="/assets/img/apple-icon-114x114.png" />
+  <link rel="apple-touch-icon" sizes="120x120" href="/assets/img/apple-icon-120x120.png" />
+  <link rel="apple-touch-icon" sizes="144x144" href="/assets/img/apple-icon-144x144.png" />
+  <link rel="apple-touch-icon" sizes="152x152" href="/assets/img/apple-icon-152x152.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/img/apple-icon-180x180.png" />
+  <link rel="icon" type="image/png" sizes="192x192"  href="/assets/img/android-icon-192x192.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/img/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="96x96" href="/assets/img/favicon-96x96.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/img/favicon-16x16.png" />
+  <link rel="manifest" href="/assets/img/manifest.json" />
+  <meta name="msapplication-TileColor" content="#ffffff" />
+  <meta name="msapplication-TileImage" content="/ms-icon-144x144.png" />
+  <meta name="theme-color" content="#ffffff" />
+
+  <!-- Loading styles, need to be inlined so that they display straight away -->
+  <style>
+    app-root {
+      position: relative;
+      display: block;
+    }
+
+    #brewday-logo {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      width: 256px;
+      height: 256px;
+      margin-top: -128px;
+      margin-left: -128px;
+    }
+
+  </style>
+</head>
+<body>
+  <app-root>
+    <div id="brewday-logo">
+      <svg xmlns="http://www.w3.org/2000/svg" width="256" height="256" viewBox="0 0 1024 1024">
+        <path fill="#2C494C" d="M512 122.88L130.663 258.867l58.163 504.218L512 942.08l323.175-178.995 58.163-504.218z"/>
+        <path fill="#264042" d="M512 122.88v90.931-.41V942.08l323.175-178.995 58.163-504.218z"/>
+        <g>
+          <path fill="#FFF" d="M368.167 343.3c6.87 0 14.265.077 22.185.224 7.913.154 15.756.602 23.53 1.345 7.766.749 15.013 1.869 21.736 3.36 6.723 1.499 12.473 3.74 17.255 6.724 10.455 6.274 19.342 14.943 26.667 25.994 7.317 11.058 10.98 24.649 10.98 40.784 0 17.03-4.112 31.751-12.325 44.146-8.222 12.402-19.944 21.59-35.182 27.563v.896c19.719 4.188 34.803 13.151 45.266 26.89 10.455 13.746 15.686 30.476 15.686 50.196 0 11.653-2.093 23.012-6.275 34.062-4.187 11.059-10.384 20.842-18.598 29.356-8.222 8.516-18.376 15.392-30.477 20.616-12.101 5.231-26.071 7.843-41.905 7.843H252.088v-320h116.079zm11.653 137.591c24.202 0 41.604-4.257 52.213-12.772 10.602-8.516 15.91-21.289 15.91-38.32 0-11.351-1.793-20.314-5.378-26.891-3.586-6.568-8.515-11.652-14.791-15.237-6.274-3.586-13.522-5.896-21.736-6.947-8.222-1.043-16.962-1.569-26.219-1.569h-85.155v101.736h85.156zm21.512 146.554c18.824 0 33.537-5.077 44.146-15.238 10.603-10.153 15.911-24.201 15.911-42.129 0-10.454-1.948-19.117-5.827-25.993-3.887-6.871-9.041-12.325-15.462-16.359-6.429-4.034-13.823-6.869-22.185-8.515-8.368-1.639-17.031-2.466-25.995-2.466h-97.255v110.7h106.667z"/><path fill="#FAFAFA" d="M641.928 343.3c49.299 0 87.24 12.549 113.836 37.647 26.591 25.098 39.889 63.347 39.889 114.733 0 26.891-2.99 50.721-8.964 71.485-5.979 20.77-15.238 38.249-27.787 52.437-12.549 14.194-28.536 25.027-47.954 32.493-19.426 7.471-42.431 11.204-69.02 11.204H532.123v-320h109.805zm3.584 284.145c4.776 0 10.757-.37 17.927-1.119 7.172-.743 14.792-2.536 22.857-5.379 8.068-2.837 16.059-6.946 23.978-12.325 7.914-5.379 15.015-12.696 21.289-21.962 6.274-9.257 11.428-20.839 15.462-34.732 4.034-13.895 6.05-30.701 6.05-50.421 0-19.117-1.868-36.225-5.602-51.316-3.739-15.084-9.859-27.935-18.375-38.543-8.515-10.602-19.495-18.669-32.941-24.202-13.446-5.525-30.028-8.291-49.748-8.291H574.7v248.291h70.812z"/>
+        </g>
+      </svg>
+    </div>
+  </app-root>
+<script type="text/javascript" src="inline.js"></script><script type="text/javascript" src="styles.576548859aecf4fc617b.bundle.js"></script><script type="text/javascript" src="main.dd0a93b02397a1178669.bundle.js"></script></body>
+</html>
