@@ -1,0 +1,77 @@
+<h3>Fermentables</h3>
+<table class="table table-condensed">
+  <thead>
+  <tr>
+    <th>Amount</th>
+    <th>Name</th>
+    <th class="text-right">EBC</th>
+  </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let fermentable of recipe.fermentables">
+      <td>{{fermentable.amount | round:2}} kg</td>
+      <td>{{fermentable.name}}</td>
+      <td class="text-right">
+        <span
+          class="ebc ebc-{{fermentable.color | round}}"
+        >{{fermentable.color | round}}</span>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<h3>Mash</h3>
+<table class="table table-condensed">
+  <thead>
+  <tr>
+    <th>Name</th>
+    <th>Temp</th>
+    <th class="text-right">Time</th>
+  </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let step of recipe.mash.mashSteps">
+      <td>{{step.name}}</td>
+      <td>{{step.stepTemp | round:1}}°</td>
+      <td class="text-right"><i class="fa fa-clock-o"></i> {{step.stepTime | round}}</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3>Hops</h3>
+<table class="table table-condensed">
+  <thead>
+  <tr>
+    <th>Name</th>
+    <th>Amount</th>
+    <th class="text-right">Time</th>
+    <th class="text-right">Alpha</th>
+    <th>Use</th>
+  </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let hops of recipe.hops">
+      <td title="{{ hops.notes }}">{{hops.name}}</td>
+      <td>{{hops.amount * 1000 | round}}g</td>
+      <td class="text-right"><i class="fa fa-clock-o"></i> {{hops.time | round}}</td>
+      <td class="text-right">{{hops.alpha | round:1}}%</td>
+      <td>{{hops.use}}</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3>Yeast</h3>
+<table class="table table-condensed">
+  <thead>
+  <tr>
+    <th>Amount</th>
+    <th>Name</th>
+  </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let yeast of recipe.yeasts">
+      <td>{{yeast.amount}} pkg</td>
+      <td>{{yeast.name}} ({{yeast.productId}})</td>
+    </tr>
+  </tbody>
+</table>

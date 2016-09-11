@@ -1,0 +1,4 @@
+// Webpack will find and include the font files
+$fa-font-path: "../node_modules/font-awesome/fonts";
+
+@import "~font-awesome/scss/font-awesome";

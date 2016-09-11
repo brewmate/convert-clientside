@@ -1,0 +1,48 @@
+:host {
+  display: block;
+}
+
+/*
+EBC
+*/
+.ebc {
+  display: inline-block;
+  min-width: 44px;
+  text-align: right;
+
+  &:after {
+    content: "█";
+    padding-left: 4px;
+    color: #050B0A;
+  }
+}
+.ebc-1:after { color: #F3F993; }
+.ebc-2:after { color: #F5F75C; }
+.ebc-3:after { color: #F6F513; }
+.ebc-4:after { color: #EAE615; }
+.ebc-5:after { color: #E0D01B; }
+.ebc-6:after { color: #D5BC26; }
+.ebc-7:after { color: #CDAA37; }
+.ebc-8:after { color: #C1963C; }
+.ebc-9:after { color: #BE8C3A; }
+.ebc-10:after { color: #BE823A; }
+.ebc-11:after { color: #C17A37; }
+.ebc-12:after { color: #BF7138; }
+.ebc-13:after { color: #BC6733; }
+.ebc-14:after { color: #B26033; }
+.ebc-15:after { color: #A85839; }
+.ebc-16:after { color: #985336; }
+.ebc-17:after { color: #8D4C32; }
+.ebc-18:after { color: #7C452D; }
+.ebc-19:after { color: #6B3A1E; }
+.ebc-20:after { color: #5D341A; }
+.ebc-21:after { color: #4E2A0C; }
+.ebc-22:after { color: #4A2727; }
+.ebc-23:after { color: #361F1B; }
+.ebc-24:after { color: #261716; }
+.ebc-25:after { color: #231716; }
+.ebc-26:after { color: #19100F; }
+.ebc-27:after { color: #16100F; }
+.ebc-28:after { color: #120D0C; }
+.ebc-29:after { color: #100B0A; }
+.ebc-30:after { color: #050B0A; }

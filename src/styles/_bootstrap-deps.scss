@@ -1,0 +1,5 @@
+@import "~bootstrap/scss/variables";
+@import "~bootstrap/scss/mixins";
+
+// Override bootstraps variables with our own
+@import "./variables";

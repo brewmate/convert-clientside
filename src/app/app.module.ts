@@ -1,22 +1,37 @@
+import { CommonModule } from '@angular/common';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
-import { UploadComponent } from './upload/upload.component';
-import { RecipeComponent } from './recipe/recipe.component';
-import { ConvertService } from './convert.service';
-import { JsonPrettyPipe } from './json-pretty.pipe';
+import { UploadComponent } from './components/upload.component';
+import { DownloadComponent } from './components/download.component';
+import { RecipeComponent } from './components/recipe.component';
+import { ConvertService } from './services/convert.service';
+
+import { JsonPrettyPipe } from './pipes/json-pretty.pipe';
+import { RoundPipe } from './pipes/round.pipe';
+
+const APP_COMPONENTS = [
+  AppComponent,
+  UploadComponent,
+  DownloadComponent,
+  RecipeComponent,
+];
+
+const APP_PIPES = [
+  JsonPrettyPipe,
+  RoundPipe
+];
 
 @NgModule({
   declarations: [
-    AppComponent,
-    UploadComponent,
-    RecipeComponent,
-    JsonPrettyPipe
+    ...APP_COMPONENTS,
+    ...APP_PIPES,
   ],
   imports: [
+    CommonModule,
     BrowserModule,
     FormsModule,
     HttpModule
