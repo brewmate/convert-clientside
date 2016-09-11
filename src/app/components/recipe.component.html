@@ -60,6 +60,26 @@
   </tbody>
 </table>
 
+<h3>Miscs</h3>
+<table class="table table-condensed">
+  <thead>
+  <tr>
+    <th>Name</th>
+    <th>Amount</th>
+    <th class="text-right">Time</th>
+    <th>Use</th>
+  </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let misc of recipe.miscs">
+      <td title="{{ misc.notes }}">{{misc.name}}</td>
+      <td>{{misc.amount | round:2}}</td>
+      <td class="text-right"><i class="fa fa-clock-o"></i> {{hops.time | round}}</td>
+      <td>{{hops.use}}</td>
+    </tr>
+  </tbody>
+</table>
+
 <h3>Yeast</h3>
 <table class="table table-condensed">
   <thead>
